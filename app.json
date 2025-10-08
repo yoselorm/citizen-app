@@ -1,19 +1,25 @@
 {
   "expo": {
-    "name": "citizen-app",
+    "name": "Citizen App",
     "slug": "citizen-app",
+    "scheme":"IMCC Citizen App",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
-      "image": "./assets/splash-icon.png",
+      "image": "./assets/splash-icon-dark.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "icon": {
+        "dark": "./assets/splash-icon-dark.png",
+        "light": "./assets/splash-icon-light.png",
+        "tinted": "./assets/icons/ios-dark.png"
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -23,7 +29,27 @@
       "edgeToEdgeEnabled": true
     },
     "web": {
-      "favicon": "./assets/favicon.png"
-    }
+      "favicon": "./assets/favicon.png",
+      "bundler":"metro"
+    },
+    "plugins":[
+      "expo-router",
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow IMCC to access your location to report issues."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow IMCC to access your photos to report issues.",
+          "cameraPermission": "Allow IMCC to use your camera to capture issue photos."
+        }
+      ]
+      
+    ]
+
+    
   }
 }

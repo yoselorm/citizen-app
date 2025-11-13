@@ -7,7 +7,7 @@ const _layout = () => {
   return (
   <Tabs>
     <Tabs.Screen 
-     name='index'
+     name='Analytics'
      options={{
         headerShown: false,
          title: 'Analytics',
@@ -22,7 +22,7 @@ const _layout = () => {
          tabBarLabel: "Analytics"
      }}/>
     <Tabs.Screen 
-     name='ViewIssues'
+     name='index'
      options={{
         headerShown: false,
          title: 'View Issues',

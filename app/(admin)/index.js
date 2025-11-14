@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { Ionicons } from '@expo/vector-icons'
 import { LinearGradient } from 'expo-linear-gradient'
+import { router } from 'expo-router'
 
 const AdminLogin = ({ navigation }) => {
   const [formData, setFormData] = useState({
@@ -46,7 +47,7 @@ const AdminLogin = ({ navigation }) => {
       // Demo credentials check
       if (formData.email === 'admin@accra.gov.gh' && formData.password === 'admin123') {
         // Success - Navigate to Assembly Dashboard
-        // navigation.replace('AssemblyDashboard')
+        router.replace('/(admin)/portal')
         Alert.alert('Login Successful', 'Welcome to Assembly Dashboard')
       } else {
         Alert.alert('Login Failed', 'Invalid credentials. Please try again.')

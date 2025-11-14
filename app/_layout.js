@@ -17,7 +17,10 @@ const RootLayout = () => {
                 
                 <>
                 <Redirect href="/(tabs)" />
-                <Stack screenOptions={{ headerShown: false }} />
+                <Stack screenOptions={{ headerShown: false }} >
+                <Stack.Screen name="(admin)" options={{ headerShown: false }} />
+                </Stack>
+                
               </>
             )}
         </>
